@@ -15,29 +15,24 @@ int main() {
     cin >> x;
     
     double a = 1;
+    double s =1;
 
     for (int i = 2; i < 1000; i++)
     {
         double k = x*(i-1);
 
         a *= k;
-        cout << a << endl;
+        cout << setprecision(20) <<"Znach =" << fixed << a <<" "<< "Summ = " << s << endl;
+        s +=a;
+        
 
         if (fabs(a) <= eps)
         {
             cout << "Number i = " << i+1 << endl;
+            
+    
             break;
-
         }
-        else {
-            cout << "Try other x";
-        }
-      
-      }
-
-
-
-
-
+    }
 
 }
